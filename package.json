@@ -17,9 +17,6 @@
   "engines": {
     "electron": ">=1.2.5"
   },
-  "scripts": {
-    "install": "node-pre-gyp  clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.2.5 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.2.5 --dist-url=https://atom.io/download/atom-shell "
-  },
   "binary": {
     "module_name": "node_printer",
     "module_path": "./build/{configuration}/electron-v1.2.5-{platform}-{arch}/",
