@@ -25,7 +25,9 @@
   "binary": {
     "module_name": "node_printer",
     "module_path": "./build/{configuration}/electron-v1.6.2-{platform}-{arch}/",
-    "package_name": "electron-v1.6.2-{platform}-{arch}.tar.gz"
+    "package_name": "electron-v1.6.2-{platform}-{arch}.tar.gz",
+    "host": "https://github.com/tojocky/node-printer/releases/download/",
+    "remote_path": "{version}"
   },
   "dependencies": {
     "nan": "^2.6.2",
