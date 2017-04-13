@@ -19,8 +19,7 @@
   },
   "scripts": {
     "preinstall": "npm install node-pre-gyp",
-    "install": "node-pre-gyp rebuild",
-    "release-win-ia32": "HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell",
+    "install": "HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell",
     "release-win": "HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell"
   },
   "binary": {
