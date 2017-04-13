@@ -16,16 +16,16 @@
     "url": "git://github.com/reyramos/electron-printer.git"
   },
   "engines": {
-    "electron": ">=1.2.5"
+    "electron": ">=1.6.2"
   },
   "scripts": {
-    "release-win-ia32":"HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.2.5 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.2.5 --dist-url=https://atom.io/download/atom-shell",
-    "release-win":"HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.2.5 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.2.5 --dist-url=https://atom.io/download/atom-shell"
+    "release-win-ia32":"HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell",
+    "release-win":"HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell"
   },
   "binary": {
     "module_name": "node_printer",
-    "module_path": "./build/{configuration}/electron-v1.2.5-{platform}-{arch}/",
-    "package_name": "electron-v1.2.5-{platform}-{arch}.tar.gz",
+    "module_path": "./build/{configuration}/electron-v1.6.2-{platform}-{arch}/",
+    "package_name": "electron-v1.6.2-{platform}-{arch}.tar.gz",
     "host": "https://github.com/reyramos/electron-printer/releases/download/0.0.5"
   },
   "dependencies": {
