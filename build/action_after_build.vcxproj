@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
-    <ProjectConfiguration Include="Debug|Win32">
+    <ProjectConfiguration Include="Debug|x64">
       <Configuration>Debug</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="Release|Win32">
+    <ProjectConfiguration Include="Release|x64">
       <Configuration>Release</Configuration>
-      <Platform>Win32</Platform>
+      <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
@@ -34,12 +34,12 @@
   <PropertyGroup>
     <ExecutablePath>$(ExecutablePath);$(MSBuildProjectDirectory)\..\bin\;$(MSBuildProjectDirectory)\..\bin\</ExecutablePath>
     <IntDir>$(Configuration)\obj\$(ProjectName)\</IntDir>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
-    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|x64'">false</LinkIncremental>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</LinkIncremental>
     <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
     <TargetName>$(ProjectName)</TargetName>
   </PropertyGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Ramor11\.node-gyp\iojs-1.6.2\include\node;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\src;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\uv\include;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
@@ -68,14 +68,14 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetMachine>MachineX86</TargetMachine>
+      <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>C:\Users\Ramor11\.node-gyp\iojs-1.6.2\include\node;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\src;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\uv\include;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>NODE_GYP_MODULE_NAME=action_after_build;USING_UV_SHARED=1;USING_V8_SHARED=1;V8_DEPRECATION_WARNINGS=1;WIN32;_CRT_SECURE_NO_DEPRECATE;_CRT_NONSTDC_NO_DEPRECATE;_HAS_EXCEPTIONS=0;MODULE_NAME=node_printer;DEBUG;_DEBUG;%(PreprocessorDefinitions);%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ResourceCompile>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <ClCompile>
       <AdditionalIncludeDirectories>C:\Users\Ramor11\.node-gyp\iojs-1.6.2\include\node;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\src;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\uv\include;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <AdditionalOptions>/MP %(AdditionalOptions)</AdditionalOptions>
@@ -115,7 +115,7 @@
       <OptimizeReferences>true</OptimizeReferences>
       <RandomizedBaseAddress>true</RandomizedBaseAddress>
       <SuppressStartupBanner>true</SuppressStartupBanner>
-      <TargetMachine>MachineX86</TargetMachine>
+      <TargetMachine>MachineX64</TargetMachine>
     </Link>
     <ResourceCompile>
       <AdditionalIncludeDirectories>C:\Users\Ramor11\.node-gyp\iojs-1.6.2\include\node;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\src;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\uv\include;C:\Users\Ramor11\.node-gyp\iojs-1.6.2\deps\v8\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
@@ -131,9 +131,9 @@
   <ItemGroup>
     <CustomBuild Include="$(OutDir)\node_printer.node">
       <FileType>Document</FileType>
-      <Command>call mkdir &quot;C:\Development\@personal\electron-printer\build\Release\electron-v1.6.2-win32-ia32&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(OutDir)node_printer.node&quot; &quot;C:\Development\@personal\electron-printer\build\Release\electron-v1.6.2-win32-ia32\node_printer.node&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
-      <Message>Copying $(OutDir)/node_printer.node to C:/Development/@personal/electron-printer/build/Release/electron-v1.6.2-win32-ia32\node_printer.node</Message>
-      <Outputs>C:\Development\@personal\electron-printer\build\Release\electron-v1.6.2-win32-ia32\node_printer.node</Outputs>
+      <Command>call mkdir &quot;C:\Development\@personal\electron-printer\build\Release\electron-v1.6.2-win32-x64&quot; 2&gt;nul &amp; set ERRORLEVEL=0 &amp; copy /Y &quot;$(OutDir)node_printer.node&quot; &quot;C:\Development\@personal\electron-printer\build\Release\electron-v1.6.2-win32-x64\node_printer.node&quot;&#xD;&#xA;if %errorlevel% neq 0 exit /b %errorlevel%</Command>
+      <Message>Copying $(OutDir)/node_printer.node to C:/Development/@personal/electron-printer/build/Release/electron-v1.6.2-win32-x64\node_printer.node</Message>
+      <Outputs>C:\Development\@personal\electron-printer\build\Release\electron-v1.6.2-win32-x64\node_printer.node</Outputs>
     </CustomBuild>
   </ItemGroup>
   <ItemGroup>
