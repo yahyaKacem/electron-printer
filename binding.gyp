@@ -3,16 +3,13 @@
       {
         "target_name": "action_after_build",
         "type": "none",
-        "dependencies": [ "<(module_name)" ],
+        "dependencies": [ "<(node_printer)" ],
         "copies": [
           {
-            "files": [ "<(PRODUCT_DIR)/<(module_name).node" ],
-            "destination": "<(module_path)"
+            "files": [ "<(PRODUCT_DIR)/<(node_printer).node" ],
+            "destination": "<(node_printer)"
           }
-        ],
-           'defines': [
-                'MODULE_NAME=<(module_name)'
-              ]
+        ]
       },
     {
       'target_name': 'node_printer',
