@@ -3,6 +3,7 @@
   "description": "Node.js printer bindings -  electron builds",
   "version": "1.6.2",
   "homepage": "https://github.com/reyramos/electron-printer",
+  "main": "index.js",
   "author": {
     "name": "Marco Piraccini",
     "email": "marco.piraccini@gmail.com"
@@ -14,11 +15,7 @@
     "type": "git",
     "url": "git://github.com/reyramos/electron-printer.git"
   },
-  "engines": {
-    "electron": ">=1.6.2"
-  },
   "scripts": {
-    "preinstall": "npm install node-pre-gyp",
     "install": "node-pre-gyp install --fallback-to-build",
     "release-win-ia32": "HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell",
     "release-win": "HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell"
@@ -27,16 +24,7 @@
     "nan": "^2.6.2",
     "node-pre-gyp": "^0.6.34"
   },
-  "devDependencies": {
-    "nodeunit": "*"
-  },
-  "bundledDependencies": [
-    "node-pre-gyp"
-  ],
-  "licenses": [
-    {
-      "type": "MIT"
-    }
-  ],
-  "main": "./index"
+  "engines": {
+    "electron": ">=1.6.2"
+  }
 }
