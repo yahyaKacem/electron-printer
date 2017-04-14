@@ -3,16 +3,16 @@
       {
         "target_name": "action_after_build",
         "type": "none",
-        "dependencies": [ "<(node_printer)" ],
+        "dependencies": [ "<(module_path)" ],
         "copies": [
           {
-            "files": [ "<(PRODUCT_DIR)/<(node_printer).node" ],
-            "destination": "<(node_printer)"
+            "files": [ "<(PRODUCT_DIR)/<(module_path).node" ],
+            "destination": "<(module_path)"
           }
         ]
       },
     {
-      'target_name': 'node_printer',
+      'target_name': 'module_path',
       'sources': [
         # is like "ls -1 src/*.cc", but gyp does not support direct patterns on
         # sources
