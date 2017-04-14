@@ -24,9 +24,6 @@
     "node-pre-gyp": "^0.6.34",
     "node-printer": "^1.0.2"
   },
-  "bundledDependencies": [
-    "node-pre-gyp"
-  ],
   "engines": {
     "electron": ">=1.6.2"
   }
