@@ -26,9 +26,12 @@
     "host": "https://github.com/reyramos/electron-printer/releases/",
     "remote_path": "1.6.2"
   },
-  "devDependencies": {
+  "dependencies": {
     "node-pre-gyp": "^0.6.34"
   },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
   "engines": {
     "electron": ">=1.6.2"
   }
