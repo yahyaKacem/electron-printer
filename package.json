@@ -14,12 +14,6 @@
     "type": "git",
     "url": "git://github.com/reyramos/electron-printer.git"
   },
-  "scripts": {
-    "preinstall": "npm install node-pre-gyp",
-    "install": "node-pre-gyp install --fallback-to-build && npm run ia32 && npm run x64",
-    "ia32": "node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell",
-    "x64": "node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.2 --dist-url=https://atom.io/download/atom-shell"
-  },
   "binary": {
     "module_name": "node_printer",
     "module_path": "./build/{configuration}/electron-v1.6.2-{platform}-{arch}/",
