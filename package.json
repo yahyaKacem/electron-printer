@@ -18,8 +18,8 @@
     "electron": ">=1.6.6"
   },
   "scripts": {
-    "release-win-ia32":"HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.6 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.6 --dist-url=https://atom.io/download/atom-shell",
-    "release-win":"HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.6 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.6 --dist-url=https://atom.io/download/atom-shell",
+    "release-win-ia32":"set HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.6 --build-from-source && node-pre-gyp package --target_arch=ia32 --target_platform=win32 --runtime=electron --target=1.6.6 --dist-url=https://atom.io/download/atom-shell",
+    "release-win":"set HOME=~/.electron-gyp node-pre-gyp clean configure build --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.6 --build-from-source && node-pre-gyp package --target_arch=x64 --target_platform=win32 --runtime=electron --target=1.6.6 --dist-url=https://atom.io/download/atom-shell",
     "install": "node-pre-gyp install --fallback-to-build",
     "release-linux-ia32": "node-pre-gyp rebuild --target_arch=ia32 --dist-url=https://atom.io/download/atom-shell --target_platform=linux --runtime=electron --target=1.6.6 && node-pre-gyp --target_arch=ia32 --target_platform=linux --runtime=electron --target=1.6.6 package && node-pre-gyp-github publish --release",
     "release-linux": "node-pre-gyp rebuild --target_arch=x64 --dist-url=https://atom.io/download/atom-shell --runtime=electron --target=1.6.6 --target_platform=linux && node-pre-gyp package --target_arch=x64 --target_platform=linux --runtime=electron --target=1.6.6 && node-pre-gyp-github publish --release",
